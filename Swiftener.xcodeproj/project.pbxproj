@@ -10,6 +10,9 @@
 		A93146C21958CB360088E408 /* Swiftener.h in Headers */ = {isa = PBXBuildFile; fileRef = A93146C11958CB360088E408 /* Swiftener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A93146C81958CB360088E408 /* Swiftener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93146BC1958CB360088E408 /* Swiftener.framework */; };
 		A93146CF1958CB360088E408 /* SwiftenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93146CE1958CB360088E408 /* SwiftenerTests.swift */; };
+		A93146DC1958CB8E0088E408 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93146D91958CB8E0088E408 /* FunctionalArray.swift */; };
+		A93146DD1958CB8E0088E408 /* ArrayConcatenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93146DB1958CB8E0088E408 /* ArrayConcatenation.swift */; };
+		A93146DF1958CBAA0088E408 /* PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93146DE1958CBAA0088E408 /* PatternMatching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		A93146C71958CB360088E408 /* SwiftenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93146CD1958CB360088E408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93146CE1958CB360088E408 /* SwiftenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftenerTests.swift; sourceTree = "<group>"; };
+		A93146D91958CB8E0088E408 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArray.swift; sourceTree = "<group>"; };
+		A93146DB1958CB8E0088E408 /* ArrayConcatenation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayConcatenation.swift; sourceTree = "<group>"; };
+		A93146DE1958CBAA0088E408 /* PatternMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternMatching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				A93146C11958CB360088E408 /* Swiftener.h */,
+				A93146D81958CB8E0088E408 /* Extensions */,
+				A93146DA1958CB8E0088E408 /* Operators */,
 				A93146BF1958CB360088E408 /* Supporting Files */,
 			);
 			path = Swiftener;
@@ -100,6 +108,23 @@
 				A93146CD1958CB360088E408 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A93146D81958CB8E0088E408 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A93146D91958CB8E0088E408 /* FunctionalArray.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A93146DA1958CB8E0088E408 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				A93146DB1958CB8E0088E408 /* ArrayConcatenation.swift */,
+				A93146DE1958CBAA0088E408 /* PatternMatching.swift */,
+			);
+			path = Operators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93146DC1958CB8E0088E408 /* FunctionalArray.swift in Sources */,
+				A93146DD1958CB8E0088E408 /* ArrayConcatenation.swift in Sources */,
+				A93146DF1958CBAA0088E408 /* PatternMatching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +426,7 @@
 				A93146D41958CB360088E408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93146D51958CB360088E408 /* Build configuration list for PBXNativeTarget "SwiftenerTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +435,7 @@
 				A93146D71958CB360088E408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
