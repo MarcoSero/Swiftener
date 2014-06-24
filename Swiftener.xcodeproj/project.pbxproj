@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A92CE7DA19599C9E00B1436F /* PatternMatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CE7D919599C9E00B1436F /* PatternMatchingTests.swift */; };
+		A92CE7E41959A95800B1436F /* ArrayConcatenationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CE7E31959A95800B1436F /* ArrayConcatenationTests.swift */; };
 		A93146C21958CB360088E408 /* Swiftener.h in Headers */ = {isa = PBXBuildFile; fileRef = A93146C11958CB360088E408 /* Swiftener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A93146C81958CB360088E408 /* Swiftener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93146BC1958CB360088E408 /* Swiftener.framework */; };
 		A93146CF1958CB360088E408 /* FunctionalArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93146CE1958CB360088E408 /* FunctionalArrayTests.swift */; };
@@ -84,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A92CE7D919599C9E00B1436F /* PatternMatchingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternMatchingTests.swift; sourceTree = "<group>"; };
+		A92CE7E31959A95800B1436F /* ArrayConcatenationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayConcatenationTests.swift; sourceTree = "<group>"; };
 		A93146BC1958CB360088E408 /* Swiftener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93146C01958CB360088E408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93146C11958CB360088E408 /* Swiftener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swiftener.h; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			children = (
 				A93146E01958CC840088E408 /* Libraries */,
 				A93146CE1958CB360088E408 /* FunctionalArrayTests.swift */,
+				A92CE7D919599C9E00B1436F /* PatternMatchingTests.swift */,
+				A92CE7E31959A95800B1436F /* ArrayConcatenationTests.swift */,
 				A93146CC1958CB360088E408 /* Supporting Files */,
 			);
 			path = SwiftenerTests;
@@ -409,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93146CF1958CB360088E408 /* FunctionalArrayTests.swift in Sources */,
+				A92CE7E41959A95800B1436F /* ArrayConcatenationTests.swift in Sources */,
+				A92CE7DA19599C9E00B1436F /* PatternMatchingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

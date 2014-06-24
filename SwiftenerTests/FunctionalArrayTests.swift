@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Swiftener
 
-class FunctionalArray: QuickSpec {
+class FunctionalArrayTests: QuickSpec {
   override func spec() {
     describe("functional array extension") {
       
@@ -18,11 +18,11 @@ class FunctionalArray: QuickSpec {
         
           let testArray: Int[] = []
           
-          it("head should be nil") {
-//            expect(testArray.head).to.beNil()
+          it("should return a nil head") {
+//            expect(testArray.head!).to.beNil()
           }
           
-          it("tail should return an empty array") {
+          it("should return an empty tail") {
             expect(testArray.tail).to.equal([])
           }
           
@@ -38,11 +38,11 @@ class FunctionalArray: QuickSpec {
         let value: Int = 1
         let testArray: Int[] = [value]
         
-        it("head should be nil") {
+        it("should have the only value as head") {
 //          expect(testArray.head).to.equal(value)
         }
         
-        it("tail should return an empty array") {
+        it("should return an empty tail") {
           expect(testArray.tail).to.equal([])
         }
         
@@ -57,11 +57,11 @@ class FunctionalArray: QuickSpec {
         
         let testArray: Int[] = [1, 2, 3]
         
-        it("head should be nil") {
+        it("should have a non-nil head") {
 //          expect(testArray.head).to.equal(1)
         }
         
-        it("tail should return an empty array") {
+        it("should have the correct tail") {
           expect(testArray.tail).to.equal([2, 3])
         }
         
