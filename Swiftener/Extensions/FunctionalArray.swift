@@ -8,8 +8,8 @@
 
 extension Array {
   
-  var head: T? {
-    if count == 0 {
+  var head: T! {
+    if isEmpty {
       return nil
     }
     return self[0]
