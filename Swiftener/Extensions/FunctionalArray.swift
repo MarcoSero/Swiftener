@@ -16,7 +16,7 @@ extension Array {
   }
   
   var tail: Array {
-    if count == 0 {
+    if isEmpty {
       return []
     }
     return Array(dropFirst(self))
