@@ -19,7 +19,7 @@ class FunctionalArrayTests: QuickSpec {
           let testArray: Int[] = []
           
           it("should return a nil head") {
-//            expect(testArray.head).to.beNil()
+            expect(testArray.head).to.beNil()
           }
           
           it("should return an empty tail") {
@@ -39,7 +39,7 @@ class FunctionalArrayTests: QuickSpec {
         let testArray: Int[] = [value]
         
         it("should have the only value as head") {
-//          expect(testArray.head).to.equal(value)
+          expect(testArray.head).to.equal(value)
         }
         
         it("should return an empty tail") {
@@ -58,7 +58,7 @@ class FunctionalArrayTests: QuickSpec {
         let testArray: Int[] = [1, 2, 3]
         
         it("should have a non-nil head") {
-//          expect(testArray.head).to.equal(1)
+          expect(testArray.head).to.equal(1)
         }
         
         it("should have the correct tail") {

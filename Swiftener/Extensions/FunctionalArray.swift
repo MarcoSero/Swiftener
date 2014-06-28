@@ -8,11 +8,16 @@
 
 extension Array {
   
-  var head: T! {
-    if isEmpty {
-      return nil
-    }
-    return self[0]
+// APPLE PLEASE FIXME!!
+// http://openradar.appspot.com/17465144
+//  var head: T! {
+//    if isEmpty {
+//      return nil
+//    }
+//    return self[0]
+//  }
+  var head: NSObject! {
+    return self.bridgeToObjectiveC().firstObject as? NSObject
   }
   
   var tail: Array {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4C0F3674-0CDF-429D-B23B-AA7561B45572</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Swiftener</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2144BB06-220E-4A5D-B662-EB087C999D42</key>
+		<string>ssh://github.com/modocache/Quick.git</string>
+		<key>81194965-3637-44A1-9548-99303406E14D</key>
+		<string>ssh://github.com/MarcoSero/Swiftener.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Swiftener.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2144BB06-220E-4A5D-B662-EB087C999D42</key>
+		<string>../../Libraries/Quick</string>
+		<key>81194965-3637-44A1-9548-99303406E14D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/MarcoSero/Swiftener.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>81194965-3637-44A1-9548-99303406E14D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2144BB06-220E-4A5D-B662-EB087C999D42</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Quick</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>81194965-3637-44A1-9548-99303406E14D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swiftener</string>
+		</dict>
+	</array>
+</dict>
+</plist>
