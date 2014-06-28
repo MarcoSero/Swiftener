@@ -16,9 +16,6 @@ extension Array {
 //    }
 //    return self[0]
 //  }
-  var head: NSObject! {
-    return self.bridgeToObjectiveC().firstObject as? NSObject
-  }
   
   var tail: Array {
     if isEmpty {
