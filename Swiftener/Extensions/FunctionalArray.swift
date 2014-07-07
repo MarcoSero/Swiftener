@@ -26,7 +26,7 @@ extension Array {
   
   var split: (Array, Array) {
     let i = Int(ceil(Double(count) / 2))
-    return (Array(self[0..i]), Array(self[i..count]))
+    return (Array(self[0..<i]), Array(self[i..<count]))
   }
   
 }
