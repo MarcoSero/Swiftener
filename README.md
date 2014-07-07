@@ -7,12 +7,14 @@ Work in progress...
 
 ### Array
 
-    // Concatenation
+#### Concatenation
+
     1 ++ [2, 3]             // [1, 2, 3]
     [1, 2] ++ [3, 4]        // [1, 2, 3, 4]
     [1, 2] ++ 3 ++ [4, 5]   // [1, 2, 3, 4, 5]
 
-    // Pattern matching
+#### Pattern matching
+
     let array = [1, 2]
     switch ([]) {
     case []:
@@ -20,14 +22,16 @@ Work in progress...
     case [1, 2]:        // yep, found!
     }
 
-    // Utilities
+#### Utilities
+
     [1, 2, 3].head  //= 1
     [1, 2, 3].tail  //= [2, 3]
     [1, 2, 3].split //= ([1], [2, 3])
 
 ### String
 
-    // Subscript
+#### Subscript
+
     let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let character: Character  = alphabet[1]      //= "B"
     let alphabetRange: String = alphabet[1..<4]  //= "BCD"
