@@ -16,8 +16,8 @@ class PatternMatchingTests: QuickSpec {
       
       context("when overloading pattern matching for arrays") {
         
-        let emptyArray: Int[] = []
-        let nonEmptyArray: Int[] = [1,2,3]
+        let emptyArray: [Int] = []
+        let nonEmptyArray: [Int] = [1,2,3]
         
         it("should match an empty array") {
           switch (emptyArray) {

@@ -16,7 +16,7 @@ class ArrayConcatenationTests: QuickSpec {
       
       context("when concatenating empty arrays") {
         
-        let emptyArray: Int[] = []
+        let emptyArray: [Int] = []
         
         it("should concatenate two empty arrays creating an empty array") {
           expect(emptyArray ++ emptyArray).to.equal([])
@@ -30,7 +30,7 @@ class ArrayConcatenationTests: QuickSpec {
       
       context("when concatenating a non empty array with a value") {
         
-        let array: Int[] = [1,2,3]
+        let array: [Int] = [1,2,3]
         
         it("should concatenate a non empty array with a value creating one that contains the old array and the new value") {
           expect(array ++ 4).to.equal([1,2,3,4])
@@ -42,9 +42,9 @@ class ArrayConcatenationTests: QuickSpec {
       
       context("when concatenating non empty arrays") {
         
-        let arrayA: Int[] = [1,2,3]
-        let arrayB: Int[] = [4,5,6]
-        let expectedResult: Int[]  = [1,2,3,4,5,6]
+        let arrayA: [Int] = [1,2,3]
+        let arrayB: [Int] = [4,5,6]
+        let expectedResult: [Int]  = [1,2,3,4,5,6]
         
         it("should concatenate two non empty arrays creating one that contains all the items") {
           expect(arrayA ++ arrayB).to.equal(expectedResult)

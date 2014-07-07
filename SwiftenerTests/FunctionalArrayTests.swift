@@ -16,7 +16,7 @@ class FunctionalArrayTests: QuickSpec {
       
         context("when the array is empty") {
         
-          let testArray: Int[] = []
+          let testArray: [Int] = []
           
           it("should return a nil head") {
             expect(testArray.head).to.beNil()
@@ -36,7 +36,7 @@ class FunctionalArrayTests: QuickSpec {
       context("when the array has one element") {
         
         let value: Int = 1
-        let testArray: Int[] = [value]
+        let testArray: [Int] = [value]
         
         it("should have the only value as head") {
           expect(testArray.head).to.equal(value)
@@ -55,7 +55,7 @@ class FunctionalArrayTests: QuickSpec {
       
       context("when the array has many elements") {
         
-        let testArray: Int[] = [1, 2, 3]
+        let testArray: [Int] = [1, 2, 3]
         
         it("should have a non-nil head") {
           expect(testArray.head).to.equal(1)
