@@ -9,7 +9,7 @@
 operator infix ++ { associativity left precedence 140 }
 
 func ++ <T>(left: [T], right: [T]) -> [T] {
-  var a = Array<T>(left)
+  var a = [T](left)
   a += right
   return a
 }
