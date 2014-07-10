@@ -90,16 +90,18 @@ class FunctionalArrayTests: QuickSpec {
           expect(testArray.drop(10)).to.equal([])
         }
         
-        it("should zip the arrays") {
-          let testString = "marco"
-          expect(zip(testArray, [testString])).to.equal([(value, testString)])
-        }
+//        it("should zip the arrays") {
+//          let testString = "marco"
+//          expect(zip(testArray, [testString])).to.equal([(value, testString)])
+//        }
         
       }
       
       context("when the array has many elements") {
         
         let testArray: [Int] = [1, 2, 3]
+        let testStrings = ["mr", "marco", "sero"]
+        let zipped = [(1, "mr"), (2, "marco"), (3, "sero")]
         
 //        it("should have a non-nil head") {
 //          expect(testArray.head).to.equal(1)
@@ -113,6 +115,35 @@ class FunctionalArrayTests: QuickSpec {
           expect(testArray.split.0).to.equal([1, 2])
           expect(testArray.split.1).to.equal([3])
         }
+        
+        it("should not be alone") {
+          expect(testArray.isAlone).to.beFalse()
+        }
+        
+//          it("should have the last element") {
+//            expect(testArray.last).to.equal(3)
+//          }
+        
+        it("should take the element if the range is valid") {
+          expect(testArray.take(0)).to.equal([])
+          expect(testArray.take(1)).to.equal([1])
+          expect(testArray.take(3)).to.equal(testArray)
+          expect(testArray.take(10)).to.equal(testArray)
+        }
+        
+        it("should drop the only element") {
+          expect(testArray.drop(0)).to.equal(testArray)
+          expect(testArray.drop(1)).to.equal([2, 3])
+          expect(testArray.drop(10)).to.equal([])
+        }
+        
+//        it("should zip the arrays") {
+//          expect(zip(testArray, testStrings)).to.equal(zipped)
+//        }
+        
+//        it("should unzip the tuples") {
+//          expect(unzip(zipped)).to.equal((testArray, testStrings))
+//        }
         
       }
       

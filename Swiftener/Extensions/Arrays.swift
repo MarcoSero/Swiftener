@@ -22,8 +22,8 @@ extension Array {
   }
   
   var last: T! {
-  if self.count <= 1 {
-    return self.head
+    if self.count <= 1 {
+      return self.head
     }
     return self.tail.reverse().head
   }
@@ -41,8 +41,11 @@ extension Array {
   }
   
   func drop(n: Int) -> Array {
-    let max = MAX(count-n, 0)
-    return Array(self[0..<max])
+    if isEmpty || n > count {
+      return []
+    }
+    let max = MAX(n, 0)
+    return Array(self[max..<count])
   }
   
   var split: (Array, Array) {
@@ -76,25 +79,10 @@ extension Array {
     }
   }
 
-  
-//  func removeDuplicates<T: Hashable>() -> [T] {
-//    var duplicatesMap: [T : Bool] = [:]
-//    var uniquified: [T] = []
-//    for consideredValue in self {
-//      if let possibleEqualValue = duplicatesMap[consideredValue] {
-//        if consideredValue != possibleEqualValue {
-//          uniquified += consideredValue
-//        }
-//      }
-//      duplicatesMap[consideredValue] = true
-//    }
-//    return uniquified
-//  }
-  
 //  func withoutNil<T: Equatable>() -> [T] {
-//    return self.filter({ $0 != nil })
+//    return self.filter({ value in value != nil })
 //  }
-    
+  
 //  func without<T: Equatable>(value: T) -> [T] {
 //    return self.filter{ $0 != value }
 //  }
