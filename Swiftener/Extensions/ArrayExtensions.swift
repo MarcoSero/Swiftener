@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
 
+//= General computed properties
+
 extension Array {
   
   var isAlone: Bool {
@@ -34,7 +36,13 @@ extension Array {
     }
     return Array(dropFirst(self))
   }
-  
+
+}
+
+//= Taking, dropping and splitting elements
+
+extension Array {
+
   func take(n: Int) -> Array {
     let min = MIN(n, count)
     return Array(self[0..<min])
@@ -48,10 +56,16 @@ extension Array {
     return Array(self[max..<count])
   }
   
-  var split: (Array, Array) {
+  func split() -> (Array, Array) {
     let i = Int(ceil(Double(count) / 2))
     return (Array(self[0..<i]), Array(self[i..<count]))
   }
+
+}
+
+//= Max and Min
+
+extension Array {
   
   func max<T: Comparable>() -> T! {
     if isEmpty || isAlone {
@@ -67,6 +81,28 @@ extension Array {
     return MIN(self.head as T, self.tail.max())
   }
   
+}
+
+//= Filtering
+
+extension Array {
+  
+  // The following functions don't compile
+  // TODO: file a radar
+  //  func withoutNil<T: Equatable>() -> [T] {
+  //    return self.filter({ value in value != nil })
+  //  }
+  
+  //  func without<T: Equatable>(value: T) -> [T] {
+  //    return self.filter{ $0 != value }
+  //  }
+  
+}
+
+//= Loops
+
+extension Array {
+  
   func each<T>(block: (T) -> Void) {
     for value in self {
       block(value as T)
@@ -78,14 +114,5 @@ extension Array {
       block(index, value as T)
     }
   }
-
-//  func withoutNil<T: Equatable>() -> [T] {
-//    return self.filter({ value in value != nil })
-//  }
-  
-//  func without<T: Equatable>(value: T) -> [T] {
-//    return self.filter{ $0 != value }
-//  }
   
 }
-

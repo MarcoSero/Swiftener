@@ -27,8 +27,8 @@ class FunctionalArrayTests: QuickSpec {
           }
           
           it("should split the array into 2 empty arrays") {
-            expect(testArray.split.0).to.equal([])
-            expect(testArray.split.1).to.equal([])
+            expect(testArray.split().0).to.equal([])
+            expect(testArray.split().1).to.equal([])
           }
           
           it("should not be alone, but empty") {
@@ -67,8 +67,8 @@ class FunctionalArrayTests: QuickSpec {
         }
         
         it("should split the array into 2 arrays with the same value") {
-          expect(testArray.split.0).to.equal([value])
-          expect(testArray.split.1).to.equal([])
+          expect(testArray.split().0).to.equal([value])
+          expect(testArray.split().1).to.equal([])
         }
         
         it("should be alone") {
@@ -112,8 +112,8 @@ class FunctionalArrayTests: QuickSpec {
         }
         
         it("should split the array into 2 arrays with the same value") {
-          expect(testArray.split.0).to.equal([1, 2])
-          expect(testArray.split.1).to.equal([3])
+          expect(testArray.split().0).to.equal([1, 2])
+          expect(testArray.split().1).to.equal([3])
         }
         
         it("should not be alone") {
@@ -144,6 +144,14 @@ class FunctionalArrayTests: QuickSpec {
 //        it("should unzip the tuples") {
 //          expect(unzip(zipped)).to.equal((testArray, testStrings))
 //        }
+        
+        it("should loop self.count times") {
+          var i: Int = 0
+          testArray.each{ (v: Int) in
+            i = i + 1
+          }
+          expect(i).to.equal(testArray.count)
+        }
         
       }
       
