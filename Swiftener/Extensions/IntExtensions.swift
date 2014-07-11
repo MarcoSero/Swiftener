@@ -22,11 +22,11 @@ extension Int {
 extension Int {
   
   static func random() -> Int {
-    return Int(arc4random())
+    return random(0..<Int.max)
   }
   
   static func random(#limit: Int) -> Int {
-    return Int(arc4random()) % limit
+    return random(0..<limit)
   }
   
   static func random(range: Range<Int>) -> Int {
