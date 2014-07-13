@@ -25,12 +25,12 @@ extension Int {
     return random(0..<Int.max)
   }
   
-  static func random(#limit: Int) -> Int {
+  static func random(limit: Int) -> Int {
     return random(0..<limit)
   }
   
   static func random(range: Range<Int>) -> Int {
-    return range.startIndex + (Int(arc4random()) % range.endIndex)
+    return range.startIndex + (Int(arc4random_uniform()) % range.endIndex)
   }
   
 }

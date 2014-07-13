@@ -30,10 +30,10 @@ class IntTests: QuickSpec {
         }
         
         it("should generate random numbers with a limit") {
-          expect(Int.random(limit: 100)).to.beLessThan(100)
-          expect(Int.random(limit: 100_000)).to.beLessThan(100_000)
-          expect(Int.random(limit: 100_000_000)).to.beLessThan(100_000_000)
-          expect(Int.random(limit: 100_000_000_000)).to.beLessThan(100_000_000_000)
+          expect(Int.random(100)).to.beLessThan(100)
+          expect(Int.random(100_000)).to.beLessThan(100_000)
+          expect(Int.random(100_000_000)).to.beLessThan(100_000_000)
+          expect(Int.random(100_000_000_000)).to.beLessThan(100_000_000_000)
         }
         
         it("should generate random numbers within a range") {

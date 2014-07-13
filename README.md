@@ -61,9 +61,9 @@ Since mutability is bad, all the functions return a new copy of the array. None 
 
 #### Random generators
 
-    Int.random()                //= random number in the range 0..INT_MAX
-    Int.random(limit: 200)      //= random number in the range 0..200
-    Int.random(100..<200)       //= random number in the range 100..200
+    Int.random()              //= random number in the range 0..INT_MAX
+    Int.random(200)           //= random number in the range 0..200
+    Int.random(100..<200)     //= random number in the range 100..200
 
 ## Integration
 
