@@ -30,7 +30,8 @@ extension Int {
   }
   
   static func random(range: Range<Int>) -> Int {
-    return range.startIndex + (Int(arc4random_uniform()) % range.endIndex)
+    let bufferRangeLimit = MIN(range.startIndex, Int(Int32.max))..<MIN(range.endIndex, Int(Int32.max))
+    return Int(arc4random_uniform(UInt32(bufferRangeLimit.endIndex - bufferRangeLimit.startIndex))) + bufferRangeLimit.startIndex
   }
   
 }
