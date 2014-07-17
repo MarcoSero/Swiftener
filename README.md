@@ -5,65 +5,121 @@ Collection of extensions, operators and utilities to add syntactic sugar to Swif
 
 A continuous work in progress...
 
+### Optional
+
+#### Unwrap or default value
+
+```swift
+var optionalValue: String? = nil
+optionalValue.or("default string")      // default string
+optionalValue = "Marco"
+optionalValue.or("default string")      // Marco
+```
+
 ### Array
 
 Since mutability is bad, all the functions return a new copy of the array. None of them are declared as `mutating`.
 
 #### Concatenation with custom operator
 
-    1 ++ [2, 3]             // [1, 2, 3]
-    [1, 2] ++ [3, 4]        // [1, 2, 3, 4]
-    [1, 2] ++ 3 ++ [4, 5]   // [1, 2, 3, 4, 5]
+```swift
+1 ++ [2, 3]             // [1, 2, 3]
+[1, 2] ++ [3, 4]        // [1, 2, 3, 4]
+[1, 2] ++ 3 ++ [4, 5]   // [1, 2, 3, 4, 5]
+```
 
 #### Pattern matching
 
-    let array = [1, 2]
-    switch ([]) {
-    case []:
-    case [1]:
-    case [1, 2]:        // yep, found!
-    }
+```swift
+let array = [1, 2]
+switch ([]) {
+case []:
+case [1]:
+case [1, 2]:        // yep, found!
+}
+```
 
 #### Utilities and functional extensions
 
-    [1, 2, 3].head              //= 1
-    [1, 2, 3].tail              //= [2, 3]
-    [1, 2, 3].last              //= 3
-    [1, 2, 3].take(2)           //= [1, 2]
-    [1, 2, 3].drop(2)           //= [3]
-    [1, 2, 3].split             //= ([1], [2, 3])
-    [1, 2, 3].min               //= 1
-    [1, 2, 3].max               //= 3
-    [1, 2, 2].without(2)        //= [1]
-    [1, nil, 3].withoutNil()    //= [1, 3]
-
-    zip([1, 2, 3], ["a", "b", "c"])         //= [(1, "a"), (2, "b"), (3, "c")]
-    unzip([(1, "a"), (2, "b"), (3, "c")])   //= ([1, 2, 3], ["a", "b", "c"])
+```swift
+[1, 2, 3].head              //= 1
+```
+```swift
+[1, 2, 3].tail              //= [2, 3]
+```
+```swift
+[1, 2, 3].last              //= 3
+```
+```swift
+[1, 2, 3].take(2)           //= [1, 2]
+```
+```swift
+[1, 2, 3].drop(2)           //= [3]
+```
+```swift
+[1, 2, 3].split             //= ([1], [2, 3])
+```
+```swift
+[1, 2, 3].min               //= 1
+```
+```swift
+[1, 2, 3].max               //= 3
+```
+```swift
+[1, 2, 2].without(2)        //= [1]
+```
+```swift
+[1, nil, 3].withoutNil()    //= [1, 3]
+```
+```swift
+zip([1, 2, 3], ["a", "b", "c"])         //= [(1, "a"), (2, "b"), (3, "c")]
+```
+```swift
+unzip([(1, "a"), (2, "b"), (3, "c")])   //= ([1, 2, 3], ["a", "b", "c"])
+```
 
 #### Ruby-like Loops
 
-    [1, 2, 3].each { element in println(element) }
-    [1, 2, 3].eachWithIndex { i, e in println("element \(e) at index \(i)" }
+```swift
+[1, 2, 3].each { element in println(element) }
+```
+```swift
+[1, 2, 3].eachWithIndex { i, e in println("element \(e) at index \(i)" }
+```
 
 ### String
 
 #### Subscript
 
-    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    let character: Character  = alphabet[1]      //= "B"
-    let alphabetRange: String = alphabet[1..<4]  //= "BCD"
+```swift
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+```
+```swift
+let character: Character  = alphabet[1]      //= "B"
+```
+```swift
+let alphabetRange: String = alphabet[1..<4]  //= "BCD"
+```
 
 ### Int
 
 #### Loop n times
 
-    3.times { index in println("this will get printed 3 times") }
+```swift
+3.times { index in println("this will get printed 3 times") }
+```
 
 #### Random generators
 
-    Int.random()              //= random number in the range 0..INT_MAX
-    Int.random(200)           //= random number in the range 0..200
-    Int.random(100..<200)     //= random number in the range 100..200
+```swift
+Int.random()              //= random number in the range 0..INT_MAX
+```
+```swift
+Int.random(200)           //= random number in the range 0..200
+```
+```swift
+Int.random(100..<200)     //= random number in the range 100..200
+```
 
 ## Integration
 
