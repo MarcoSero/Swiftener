@@ -93,11 +93,7 @@ unzip([(1, "a"), (2, "b"), (3, "c")])   //= ([1, 2, 3], ["a", "b", "c"])
 
 ```swift
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-```
-```swift
 let character: Character  = alphabet[1]      //= "B"
-```
-```swift
 let alphabetRange: String = alphabet[1..<4]  //= "BCD"
 ```
 
