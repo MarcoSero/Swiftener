@@ -8,18 +8,19 @@
 
 //= Loops
 
-extension Int {
+public extension Int {
   
   func times(block: (Int) -> Void) {
     for i in 0..<self {
       block(i)
     }
   }
+  
 }
 
 //= Random numbers generators
 
-extension Int {
+public extension Int {
   
   static func random() -> Int {
     return random(0..<Int.max)

@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
 
-func ~= <T: Comparable>(left: [T], right: [T]) -> Bool {
+public func ~= <T: Comparable>(left: [T], right: [T]) -> Bool {
   return left == right
 }

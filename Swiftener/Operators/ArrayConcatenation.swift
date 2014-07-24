@@ -8,16 +8,16 @@
 
 operator infix ++ { associativity left precedence 140 }
 
-func ++ <T>(left: [T], right: [T]) -> [T] {
+public func ++ <T>(left: [T], right: [T]) -> [T] {
   var a = [T](left)
   a += right
   return a
 }
 
-func ++ <T>(left: T, right: [T]) -> [T] {
+public func ++ <T>(left: T, right: [T]) -> [T] {
   return [left] ++ right
 }
 
-func ++ <T>(left: [T], right: T) -> [T] {
+public func ++ <T>(left: [T], right: T) -> [T] {
   return left ++ [right]
 }

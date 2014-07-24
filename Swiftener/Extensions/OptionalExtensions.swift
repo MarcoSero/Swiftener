@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
 
-extension Optional {
+public extension Optional {
 
   func or(defaultValue: T) -> T {
     if let value = self {

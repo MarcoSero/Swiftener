@@ -8,7 +8,7 @@
 
 // CODE AND IDEA FROM Ole Begemann's "Strings in Swift" http://oleb.net/blog/2014/07/swift-strings/
 
-extension String {
+public extension String {
   
   subscript(integerIndex: Int) -> Character {
     let index = advance(startIndex, integerIndex)

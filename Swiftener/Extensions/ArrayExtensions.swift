@@ -8,7 +8,7 @@
 
 //= General computed properties
 
-extension Array {
+public extension Array {
   
   var isAlone: Bool {
     return self.count == 1
@@ -41,7 +41,7 @@ extension Array {
 
 //= Taking, dropping and splitting elements
 
-extension Array {
+public extension Array {
 
   func take(n: Int) -> Array {
     let min = MIN(n, count)
@@ -65,7 +65,7 @@ extension Array {
 
 //= Max and Min
 
-extension Array {
+public extension Array {
   
   func max<T: Comparable>() -> T! {
     if isEmpty || isAlone {
@@ -85,7 +85,7 @@ extension Array {
 
 //= Filtering
 
-extension Array {
+public extension Array {
   
   // The following functions don't compile
   // TODO: file a radar
@@ -101,7 +101,7 @@ extension Array {
 
 //= Loops
 
-extension Array {
+public extension Array {
   
   func each<T>(block: (T) -> Void) {
     for value in self {

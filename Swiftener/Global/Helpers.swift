@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Marco Sero. All rights reserved.
 //
 
-func MAX<T: Comparable>(a: T, b: T) -> T {
+public func MAX<T: Comparable>(a: T, b: T) -> T {
   if a >= b {
     return a
   }
   return b
 }
 
-func MIN<T: Comparable>(a: T, b: T) -> T {
+public func MIN<T: Comparable>(a: T, b: T) -> T {
   if a <= b {
     return a
   }
